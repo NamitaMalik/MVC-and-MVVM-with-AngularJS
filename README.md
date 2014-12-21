@@ -90,9 +90,6 @@ The above code contains 2 input boxes which takes number and a divisor to divide
 Also, whatever is input in those two input boxes is displayed in front of the input box itself. This code shows the **MVVM design pattern** in **JavaScript** very clearly, here you see how:
 
 ![MVVM.jpg](https://raw.githubusercontent.com/NamitaMalik/MVC-and-MVVM-with-AngularJS/master/MVVM.jpg)
-
 The above diagram segregates the code into **Model**, **View** and **View Model**.
-
 I am first starting with **view**. We know that **view** is our **HTML**,so we update it by entering '6' in the number text box and '3' in the divisor text box. As soon as any change is made in the **view**, **View Model** gets to know about it, and these values are then updated into the **Model**. Apart from this, the main work is that is happening in **View Model** is the division, number is getting divided by the divisor and is the result is being assigned to 'data.result' variable. Here, since 'data.result' is our model, and as there is change here from it's initial value of '0' to '2' now, view gets updated and the result of the division is shown on the **HTML**.
-
 This is why we say **AngularJS** follows **MVVM design pattern**.
