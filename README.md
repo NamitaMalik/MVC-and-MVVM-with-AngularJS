@@ -1,14 +1,14 @@
 MVC-and-MVVM-with-AngularJS
 ===========================
 
-**Design Patterns** is nothing but a maintainable and reusable way of writing code which can be applied to commonly occurring problems. There are numerous **design patterns** such as MVC, MVVM, DI etc. It depends upon the problem that which **design pattern** needs to be followed.
+**Design Pattern** is nothing but a maintainable and reusable way of writing code which can be applied to commonly occurring problems. There are numerous **design patterns** such as MVC, MVVM, DI etc. It depends upon the problem that which **design pattern** needs to be followed.
 This blog emphasizes on **MVC** and **MVVM** **design patterns** with reference to **AngularJS**.
 
  Let's get started:
 
  **MVC Design Pattern**
 
- To start with, **MVC design pattern** is not specific to **AngularJS**, you must have seen/implemented this model in many other **programming languages**.
+ To start with, **MVC design pattern** is not specific to **AngularJS**, you must have seen/implemented this pattern in many other **programming languages**.
   **MVC design pattern** can be seen in **AngularJS**, but before getting into that let's see what all does **MVC design pattern** includes:
 
   1. Model
