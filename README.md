@@ -11,13 +11,13 @@ This blog emphasizes on **MVC** and **MVVM** **design patterns** with reference 
  To start with, **MVC design pattern** is not specific to **AngularJS**, you must have seen/implemented this pattern in many other **programming languages**.
   **MVC design pattern** can be seen in **AngularJS**, but before getting into that let's see what all does **MVC design pattern** includes:
 
-  1. Model
-  2. View
-  3. Controller
+1. Model
+2. View
+3. Controller
 
-  **Model** is nothing but data.
-  **View** represents this data.
-  **Controller** mediates between the two.
+**Model** is nothing but data.
+**View** represents this data.
+**Controller** mediates between the two.
 
   Let's see the code below:
 
