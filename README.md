@@ -36,7 +36,7 @@ Let's see the code below:
 </html>
 ```
 
-In the above snippet, our text is represented by "sampleText" variable. This is our **model**. **Controller** is updating the **view** by displaying the data on the **view** via replacing "{{sampleText}}" with sampleText variable value. It is the **controller** that is managing the relationship between our **model** and the **view** which is the **HTML**.
+In the above snippet, our text is represented by "sampleText" variable. This is our **model**. **Controller** is updating the **view** by displaying the data on the **view** by replacing "{{sampleText}}" with sampleText variable value. It is the **controller** that is managing the relationship between our **model** and the **view** which is the **HTML**.
 
 But in **AngularJS**, we have heard that there is something called **2-way binding** and this **2-way binding** enables **MVVM design pattern**. **MVVM** basically includes 3 things:
 
