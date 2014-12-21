@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title>MVC</title>
+    <script type="text/javascript" src="angular.min.js">
+    </script>
+</head>
+<body ng-controller="TextController">
+<p>{{sampleText}}</p>
+</body>
+<script>
+    function TextController($scope) {
+        $scope.sampleText = 'This is a demo!';
+    }
+</script>
+</html>
