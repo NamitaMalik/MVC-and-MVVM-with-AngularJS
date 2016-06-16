@@ -87,3 +87,13 @@ The above diagram segregates the code into **Model**, **View** and **View Model*
 I am first starting with **view**. We know that **view** is our **HTML**,so we update it by entering '6' in the number text box and '3' in the divisor text box. As soon as any change is made in the **view**, **View Model** gets to know about it, and these values are then updated into the **Model**. Apart from this, the main work is that is happening in **View Model** is the division, number is getting divided by the divisor and is the result is being assigned to 'data.result' variable. Here, since 'data.result' is our model, and as there is change here from it's initial value of '0' to '2' now, view gets updated and the result of the division is shown on the **HTML**.
 
 This is why we say **AngularJS** follows **MVVM design pattern**.
+
+Follow Me
+---
+[Github](https://github.com/NamitaMalik)
+
+[Twitter](https://twitter.com/namita13_04)
+
+[LinkedIn](https://in.linkedin.com/in/namita-malik-a7885b23)
+
+[More Blogs By Me](https://namitamalik.github.io/)
