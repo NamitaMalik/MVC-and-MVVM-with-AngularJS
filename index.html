@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>MVC and MVVM with AngularJS by NamitaMalik</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">MVC and MVVM with AngularJS</h1>
+      <h2 class="project-tagline">This blog explains MVC and MVVM design patterns.</h2>
+      <a href="https://github.com/NamitaMalik/MVC-and-MVVM-with-AngularJS" class="btn">View on GitHub</a>
+      <a href="https://github.com/NamitaMalik/MVC-and-MVVM-with-AngularJS/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/NamitaMalik/MVC-and-MVVM-with-AngularJS/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="mvc-and-mvvm-with-angularjs" class="anchor" href="#mvc-and-mvvm-with-angularjs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>MVC and MVVM with AngularJS</h1>
+
+<p><strong>Design Pattern</strong> is nothing but a maintainable and reusable way of writing code which can be applied to commonly occurring problems. There are numerous <strong>design patterns</strong> such as <strong>MVC</strong>, <strong>MVVM</strong>, <strong>DI</strong> etc. It depends upon the problem that which <strong>design pattern</strong> needs to be followed.</p>
+
+<p>This blog emphasizes on <strong>MVC</strong> and <strong>MVVM</strong> <strong>design patterns</strong> with reference to <strong>AngularJS</strong>.</p>
+
+<p>Let's get started:</p>
+
+<p><strong>MVC Design Pattern</strong></p>
+
+<p>To start with, <strong>MVC design pattern</strong> is not specific to <strong>AngularJS</strong>, you must have seen/implemented this pattern in many other <strong>programming languages</strong>.</p>
+
+<p><strong>MVC design pattern</strong> can be seen in <strong>AngularJS</strong>, but before getting into that let's see what all does <strong>MVC design pattern</strong> includes:</p>
+
+<ol>
+<li>Model: <strong>Model</strong> is nothing but data.</li>
+<li>View: <strong>View</strong> represents this data.</li>
+<li>Controller: <strong>Controller</strong> mediates between the two.</li>
+</ol>
+
+<p>Let's see the code below:</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;!DOCTYPE html&gt;
+&lt;<span class="pl-ent">html</span> <span class="pl-e">ng-app</span>&gt;
+&lt;<span class="pl-ent">head</span>&gt;
+    &lt;<span class="pl-ent">title</span>&gt;MVC&lt;/<span class="pl-ent">title</span>&gt;
+<span class="pl-s1">    &lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>angular.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+&lt;/<span class="pl-ent">head</span>&gt;
+&lt;<span class="pl-ent">body</span> <span class="pl-e">ng-controller</span>=<span class="pl-s"><span class="pl-pds">"</span>TextController<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">p</span>&gt;{{sampleText}}&lt;/<span class="pl-ent">p</span>&gt;
+&lt;/<span class="pl-ent">body</span>&gt;
+<span class="pl-s1">&lt;<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">    <span class="pl-k">function</span> <span class="pl-en">TextController</span>(<span class="pl-smi">$scope</span>) {</span>
+<span class="pl-s1">        <span class="pl-smi">$scope</span>.<span class="pl-smi">sampleText</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>This is a demo!<span class="pl-pds">'</span></span>;</span>
+<span class="pl-s1">    }</span>
+<span class="pl-s1">&lt;/<span class="pl-ent">script</span>&gt;</span>
+&lt;/<span class="pl-ent">html</span>&gt;</pre></div>
+
+<p>In the above snippet, our text is represented by "sampleText" variable. This is our <strong>model</strong>. <strong>Controller</strong> is updating the <strong>view</strong> by displaying the data on the <strong>view</strong> by replacing "{{sampleText}}" with sampleText variable value. It is the <strong>controller</strong> that is managing the relationship between our <strong>model</strong> and the <strong>view</strong> which is the <strong>HTML</strong>.</p>
+
+<p>In <strong>MVC</strong> if we make any change in the the <strong>view</strong> it doesn't gets updated in <strong>model</strong>. But in <strong>AngularJS</strong>, we have heard that there is something called <strong>2-way binding</strong> and this <strong>2-way binding</strong> enables <strong>MVVM design pattern</strong>. <strong>MVVM</strong> basically includes 3 things:</p>
+
+<ol>
+<li>Model</li>
+<li>View</li>
+<li>View Model</li>
+</ol>
+
+<p><strong>Controller</strong> is actually replaced by <strong>View Model</strong> in <strong>MMVM design pattern</strong>. <strong>View Model</strong> is nothing but a <strong>JavaScript</strong> <strong>function</strong> which is again like a <strong>controller</strong> and is responsible for maintaining relationship between <strong>view</strong> and <strong>model</strong>, but the difference here is, if we update anything in <strong>view</strong>, it gets updated in <strong>model</strong>, change anything in <strong>model</strong>, it shows up in <strong>view</strong>, which is what we call <strong>2-way binding</strong>.</p>
+
+<p>Let's see the example given below:</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;!DOCTYPE html&gt;
+&lt;<span class="pl-ent">html</span> <span class="pl-e">ng-app</span>&gt;
+&lt;<span class="pl-ent">head</span>&gt;
+    &lt;<span class="pl-ent">title</span>&gt;Number Divisor&lt;/<span class="pl-ent">title</span>&gt;
+<span class="pl-s1">    &lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>angular.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+&lt;/<span class="pl-ent">head</span>&gt;
+&lt;<span class="pl-ent">body</span>&gt;
+&lt;<span class="pl-ent">form</span> <span class="pl-e">ng-controller</span>=<span class="pl-s"><span class="pl-pds">"</span>DivisionController<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">label</span>&gt;Number :&lt;/<span class="pl-ent">label</span>&gt; &lt;<span class="pl-ent">input</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>number<span class="pl-pds">"</span></span> <span class="pl-e">ng-change</span>=<span class="pl-s"><span class="pl-pds">"</span>divisionNeeded()<span class="pl-pds">"</span></span> <span class="pl-e">ng-model</span>=<span class="pl-s"><span class="pl-pds">"</span>data.number<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">label</span>&gt;Number entered by User :&lt;/<span class="pl-ent">label</span>&gt; {{data.number}} &lt;<span class="pl-ent">br</span>&gt;
+    &lt;<span class="pl-ent">label</span>&gt;Divisor :&lt;/<span class="pl-ent">label</span>&gt; &lt;<span class="pl-ent">input</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>divisor<span class="pl-pds">"</span></span> <span class="pl-e">ng-change</span>=<span class="pl-s"><span class="pl-pds">"</span>divisionNeeded()<span class="pl-pds">"</span></span> <span class="pl-e">ng-model</span>=<span class="pl-s"><span class="pl-pds">"</span>data.divisor<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">label</span>&gt;Number entered by User :&lt;/<span class="pl-ent">label</span>&gt; {{data.divisor}} &lt;<span class="pl-ent">br</span>&gt;
+    &lt;<span class="pl-ent">label</span>&gt;Result :&lt;/<span class="pl-ent">label</span>&gt; {{data.result}}
+&lt;/<span class="pl-ent">form</span>&gt;
+&lt;/<span class="pl-ent">body</span>&gt;
+<span class="pl-s1">&lt;<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">    <span class="pl-k">function</span> <span class="pl-en">DivisionController</span>(<span class="pl-smi">$scope</span>) {</span>
+<span class="pl-s1">        <span class="pl-smi">$scope</span>.<span class="pl-c1">data</span> <span class="pl-k">=</span> {number<span class="pl-k">:</span> <span class="pl-c1">0</span>, divisor<span class="pl-k">:</span> <span class="pl-c1">0</span>, result<span class="pl-k">:</span> <span class="pl-c1">0</span>};</span>
+<span class="pl-s1">        <span class="pl-smi">$scope</span>.<span class="pl-en">divisionNeeded</span> <span class="pl-k">=</span> <span class="pl-k">function</span> () {</span>
+<span class="pl-s1">            <span class="pl-smi">$scope</span>.<span class="pl-c1">data</span>.<span class="pl-smi">result</span> <span class="pl-k">=</span> <span class="pl-smi">$scope</span>.<span class="pl-c1">data</span>.<span class="pl-smi">number</span> <span class="pl-k">/</span> <span class="pl-smi">$scope</span>.<span class="pl-c1">data</span>.<span class="pl-smi">divisor</span>;</span>
+<span class="pl-s1">        }</span>
+<span class="pl-s1">    }</span>
+<span class="pl-s1">&lt;/<span class="pl-ent">script</span>&gt;</span>
+&lt;/<span class="pl-ent">html</span>&gt;</pre></div>
+
+<p>The above code contains 2 input boxes which takes number and a divisor to divide that number. The result of the division is shown in front of the label 'Result'.</p>
+
+<p>Also, whatever is input in those two input boxes is displayed in front of the input box itself. This code shows the <strong>MVVM design pattern</strong> in <strong>JavaScript</strong> very clearly, here you see how:</p>
+
+<p><img src="https://raw.githubusercontent.com/NamitaMalik/MVC-and-MVVM-with-AngularJS/master/MVVM.jpg" alt="MVVM.jpg"></p>
+
+<p>The above diagram segregates the code into <strong>Model</strong>, <strong>View</strong> and <strong>View Model</strong>.</p>
+
+<p>I am first starting with <strong>view</strong>. We know that <strong>view</strong> is our <strong>HTML</strong>,so we update it by entering '6' in the number text box and '3' in the divisor text box. As soon as any change is made in the <strong>view</strong>, <strong>View Model</strong> gets to know about it, and these values are then updated into the <strong>Model</strong>. Apart from this, the main work is that is happening in <strong>View Model</strong> is the division, number is getting divided by the divisor and is the result is being assigned to 'data.result' variable. Here, since 'data.result' is our model, and as there is change here from it's initial value of '0' to '2' now, view gets updated and the result of the division is shown on the <strong>HTML</strong>.</p>
+
+<p>This is why we say <strong>AngularJS</strong> follows <strong>MVVM design pattern</strong>.</p>
+
+<h2>
+<a id="follow-me" class="anchor" href="#follow-me" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Follow Me</h2>
+
+<p><a href="https://github.com/NamitaMalik">Github</a></p>
+
+<p><a href="https://twitter.com/namita13_04">Twitter</a></p>
+
+<p><a href="https://in.linkedin.com/in/namita-malik-a7885b23">LinkedIn</a></p>
+
+<p><a href="https://namitamalik.github.io/">More Blogs By Me</a></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/NamitaMalik/MVC-and-MVVM-with-AngularJS">MVC and MVVM with AngularJS</a> is maintained by <a href="https://github.com/NamitaMalik">NamitaMalik</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
