@@ -1,0 +1,8 @@
+title: MVC and MVVM with AngularJS
+description: This blog explains MVC and MVVM design patterns.
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-hacker
+
+gems:
+  - jekyll-mentions
